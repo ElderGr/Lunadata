@@ -43,22 +43,32 @@ export const MenuItens = styled.ul`
     li:hover{
         color: #FF5733;
     }
+
+    li>a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    li>a:hover{
+        color: #FF5733;
+    }
 `
 
 export const MenuCollapse = styled.section`
     
-    background-color: #fff;
+    background-color: #24252A;
     width: 100%;
     height: 350px;
     display: flex;
-    
+    color: #F1F1F1;
+    border-top: 0.5px solid #424242;
 
     > div:nth-child(1){
         display: flex;
         justify-content: center;    
         padding: 3% 1%;
         width: 25%;
-        border-right: 0.5px solid rgb(226, 226, 226);
+        border-right: 0.5px solid #424242;
 
         font-size: 14pt;
     }
@@ -71,41 +81,5 @@ export const MenuCollapse = styled.section`
     > div:nth-child(2)>div{
         display: flex;
         flex-wrap: wrap;
-    }
-`
-
-export const ItemsDetails = styled.div`
-
-    margin-bottom: 3%;
-    width: 280px;
-    display: flex;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 5px;
-    cursor: pointer;
-
-    &:hover{
-        background-color: rgb(233, 233, 233);
-    }
-
-    >div:nth-child(1){
-        width: 20%;
-        display: flex;
-        justify-content: center;
-    }
-
-    >div:nth-child(2){
-        width: 80%;
-    }
-
-    >div>div{
-        font-weight: 600;
-        font-size: 14pt;
-        margin-bottom: 4%;
-    }
-
-    >div>span{
-        font-size: 11pt;
-        color: rgb(173, 173, 173);
     }
 `

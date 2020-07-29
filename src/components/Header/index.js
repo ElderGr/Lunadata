@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
-import { FaDatabase, FaCloud, FaSitemap, FaBorderNone, FaChevronDown } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-import { Menu, MenuItens, MenuCollapse, ItemsDetails } from "./styles";
+import { Menu, MenuItens, MenuCollapse } from "./styles";
 import AnchorButton from "../AnchorButton";
 
 import Logo from "../../assets/Logo";
+import Services from './Services';
+import Cases from './Cases';
 
-function TopMenu() {
+function Header() {
 
     const [collapse, setCollapse] = useState(true);
     const [menuItem, setMenuItem] = useState('');
@@ -16,12 +19,19 @@ function TopMenu() {
             <nav className='menu-container'>
                 <div>
                     
-                    <Logo width='60px' heigth='60px' />
+                    <Link to='/'>
+                        <Logo width='60px' heigth='60px' />
+                    </Link>
                    
                     <MenuItens item={menuItem}>
                         <li onClick={() => {
-                            setCollapse(!collapse);
-                            menuItem === 'services' ? setMenuItem('') : setMenuItem('services')
+                            if(menuItem === 'services'){
+                                setMenuItem('')
+                                setCollapse(true);
+                            }else{
+                                setCollapse(false);
+                                setMenuItem('services')
+                            }
                         }}
                             className={menuItem === 'services' && 'item-active'}
                         >
@@ -29,21 +39,23 @@ function TopMenu() {
                             <FaChevronDown />
                         </li>
                         <li onClick={() => {
-                            setCollapse(!collapse);
-                            menuItem === 'cases' ? setMenuItem('') : setMenuItem('cases')
-                            
+                            if(menuItem === 'cases'){
+                                setMenuItem('')
+                                setCollapse(true);
+                            }else{
+                                setCollapse(false);
+                                setMenuItem('cases')
+                            }
                         }}
                             className={menuItem === 'cases' && 'item-active'}
                         >
                             <span>Cases</span>
                             <FaChevronDown />
                         </li>
-                        <li onClick={() => {
-                            setCollapse(!collapse);
-                            setMenuItem('articles')
-                        }}
-                        >
-                            <span>Artigos</span>
+                        <li>
+                            <Link to='/articles'>
+                                <span>Artigos</span>
+                            </Link>
                         </li>
                     </MenuItens>
                 </div>
@@ -54,59 +66,14 @@ function TopMenu() {
             </nav>
 
             {!collapse && (
-                <MenuCollapse className='details-container'>
-                    <div>
-                        A solução perfeita para seu negócio!
-                    </div>
-                    <div>
-                        <h2>Principais serviços</h2>
-                        <div>
-                            <ItemsDetails>
-                                <div>
-                                    <FaDatabase size={20} />
-                                </div>
-                                <div>
-                                    <div>Engenharia de dados</div>
-                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet diam mauris.</span>
-                                </div>
-                            </ItemsDetails>
+                <MenuCollapse className='details-container'>    
+                    {menuItem === 'services' && <Services />}
 
-                            <ItemsDetails>
-                                <div>
-                                    <FaCloud size={22} />
-                                </div>
-                                <div>
-                                    <div>Cloud Computing</div>
-                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet diam mauris.</span>
-                                </div>
-                            </ItemsDetails>
-
-                            <ItemsDetails>
-                                <div>
-                                    <FaSitemap size={22} />
-                                </div>
-                                <div>
-                                    <div>Inteligência Artificial</div>
-                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet diam mauris.</span>
-                                </div>
-                            </ItemsDetails>
-
-                            <ItemsDetails>
-                                <div>
-                                    <FaBorderNone size={22} />
-                                </div>
-                                <div>
-                                    <div>IOT</div>
-                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet diam mauris.</span>
-                                </div>
-                            </ItemsDetails>
-
-                        </div>
-                    </div>
+                    {menuItem === 'cases' && <Cases />}
                 </MenuCollapse>
             )}
         </Menu>
     );
 }
 
-export default TopMenu;
+export default Header;
