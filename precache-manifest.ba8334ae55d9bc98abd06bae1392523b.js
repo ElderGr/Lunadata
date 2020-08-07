@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b8e5fb7e4c4bf0d96693963c9c6de6ac",
+    "revision": "42eefc1347a6f0d508b82a3d5ca5abc7",
     "url": "/Lunadata/index.html"
   },
   {
-    "revision": "e422e12cfc1810db7a66",
-    "url": "/Lunadata/static/css/main.27b60e2a.chunk.css"
+    "revision": "efd602f7e2b07edf671d",
+    "url": "/Lunadata/static/css/main.5e87554e.chunk.css"
   },
   {
-    "revision": "b786416adef09738afff",
-    "url": "/Lunadata/static/js/2.b8d211a0.chunk.js"
+    "revision": "0340937a9f91eb78157c",
+    "url": "/Lunadata/static/js/2.10d6dc01.chunk.js"
   },
   {
     "revision": "216e537bacc64f9dbaabd26649a9ab95",
-    "url": "/Lunadata/static/js/2.b8d211a0.chunk.js.LICENSE.txt"
+    "url": "/Lunadata/static/js/2.10d6dc01.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e422e12cfc1810db7a66",
-    "url": "/Lunadata/static/js/main.a48e42f1.chunk.js"
+    "revision": "efd602f7e2b07edf671d",
+    "url": "/Lunadata/static/js/main.cbc42074.chunk.js"
   },
   {
     "revision": "7344c49be0dd1524e617",
