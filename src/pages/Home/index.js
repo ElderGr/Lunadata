@@ -19,7 +19,7 @@ import EngenhariaDados from "../../assets/icons/EngenhariaDados";
 import IA from "../../assets/icons/IA";
 import IOT from "../../assets/icons/IOT";
 
-const Home: React.FC = () => {
+const Home = () => {
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
   const [email, setEmail] = useState('');
@@ -91,7 +91,7 @@ const Home: React.FC = () => {
               Engenharia de dados
             </span>
             <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              Entender seus dados e prepara-los para insights, que vão alavancar seus resultados.
             </div>
           </li>
           <li>
@@ -100,7 +100,7 @@ const Home: React.FC = () => {
               Cloud computing
             </span>
             <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              Usar a escalabilidade da nuvem, e os recursos compartilhados pelas maiores empresas do mundo.
             </div>
           </li>
           <li>
@@ -118,7 +118,7 @@ const Home: React.FC = () => {
               IOT
             </span>
             <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              Dispositivos conectados em qualquer lugar do mundo  , permitindo o entendimento de acontecimentos antes ignorados.
             </div>
           </li>
         </ul>

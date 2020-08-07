@@ -158,7 +158,7 @@ export const PilarsSection = styled.section`
             }
 
             div{
-                max-width: 200px;
+                max-width: 250px;
                 word-wrap: break-word;
                 margin-top: 3%;
                 text-align: center;

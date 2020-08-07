@@ -1,9 +1,15 @@
 import React from "react";
 
-import { FaDatabase, FaCloud, FaSitemap, FaBorderNone} from "react-icons/fa";
+// import { Link } from "react-router-dom";
+
 import { ItemsDetails } from "./styles";
 
-export default function Services(){
+import CloudComputing from "../../../assets/icons/CloudComputing";
+import EngenhariaDados from "../../../assets/icons/EngenhariaDados";
+import IA from "../../../assets/icons/IA";
+import IOT from "../../../assets/icons/IOT";
+
+export default function Services({ closeMenu }){
     return(
         <>
             <div>
@@ -12,29 +18,29 @@ export default function Services(){
             <div>
                 <h2>Principais serviços</h2>
                 <div>
-                    <ItemsDetails>
+                    <ItemsDetails onClick={closeMenu} to='/dataEngenieer'>
                         <div>
-                            <FaDatabase size={20} />
+                            <EngenhariaDados width={200} height={50} />
                         </div>
                         <div>
                             <div>Engenharia de dados</div>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet diam mauris.</span>
+                            <span>Entender seus dados e prepara-los para insights, que vão alavancar seus resultados.</span>
                         </div>
                     </ItemsDetails>
 
-                    <ItemsDetails>
+                    <ItemsDetails onClick={closeMenu} to='/cloud'>
                         <div>
-                            <FaCloud size={22} />
+                            <CloudComputing width={200} height={50} />
                         </div>
                         <div>
                             <div>Cloud Computing</div>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet diam mauris.</span>
+                            <span>Usar a escalabilidade da nuvem, e os recursos compartilhados pelas maiores empresas do mundo.</span>
                         </div>
                     </ItemsDetails>
 
-                    <ItemsDetails>
+                    <ItemsDetails onClick={closeMenu} to='/ia'>
                         <div>
-                            <FaSitemap size={22} />
+                            <IA width={200} height={50} />
                         </div>
                         <div>
                             <div>Inteligência Artificial</div>
@@ -42,13 +48,13 @@ export default function Services(){
                         </div>
                     </ItemsDetails>
 
-                    <ItemsDetails>
+                    <ItemsDetails onClick={closeMenu} to='/iot'>
                         <div>
-                            <FaBorderNone size={22} />
+                            <IOT width={200} height={50} />
                         </div>
                         <div>
                             <div>IOT</div>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet diam mauris.</span>
+                            <span>Dispositivos conectados em qualquer lugar do mundo , permitindo o entendimento de acontecimentos antes ignorados.</span>
                         </div>
                     </ItemsDetails>
 

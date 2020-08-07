@@ -67,9 +67,9 @@ function Header() {
 
             {!collapse && (
                 <MenuCollapse className='details-container'>    
-                    {menuItem === 'services' && <Services />}
+                    {menuItem === 'services' && <Services closeMenu={() => setCollapse(true)} />}
 
-                    {menuItem === 'cases' && <Cases />}
+                    {menuItem === 'cases' && <Cases closeMenu={() => setCollapse(true)} />}
                 </MenuCollapse>
             )}
         </Menu>

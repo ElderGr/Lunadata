@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const ItemsDetails = styled.div`
-
+export const ItemsDetails = styled(Link)`
+    text-decoration: none;
     margin-bottom: 3%;
     width: 280px;
     display: flex;
@@ -9,6 +10,7 @@ export const ItemsDetails = styled.div`
     margin-right: 0.5%;
     border-radius: 5px;
     cursor: pointer;
+    color: #fff;
 
     &:hover{
         background-color: #424242;
