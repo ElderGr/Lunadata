@@ -35,7 +35,7 @@ export const IntroSection = styled.section`
     }
 
     div:nth-child(2){
-        width: 600px ;
+        width: 600px;
         text-align: end;
         margin-right: 10%;
         display: flex;
@@ -47,18 +47,51 @@ export const IntroSection = styled.section`
 
         h1{
             margin: 0;
-            font-size: 25pt
+            font-size: 2rem;
         }
 
         h2{
-            font-size: 12pt;
+            font-size: 1rem;
             font-weight: 200;
-            width: 400px;
-            margin: 2% 0 0 0;
+            width: 25rem;
+            margin: 3% 0 0 0;
         }
 
         a{
             margin-top: 5%;
+        }
+    }
+
+    @media(min-width: 1025px){
+
+    }
+
+    @media(min-width: 769px) and (max-width: 1024px){
+
+    }
+    
+    @media(max-width: 768px){
+        > div:nth-child(2){
+            text-align: center;
+            margin-right: 0%;
+
+            justify-content: center;
+
+            >h1{
+                font-size: 1.5rem;
+                width: 20rem;
+                align-self: center;
+            }
+
+            >h2{
+                align-self: center;
+                font-size: 1rem;
+                width: 20rem;
+            }
+
+            a{
+                align-self: center
+            }
         }
     }
 `;
@@ -66,6 +99,7 @@ export const IntroSection = styled.section`
 export const ValuesSection = styled.section`
     height: 80vh;
     display: flex;
+    padding-top: 5%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -117,11 +151,13 @@ export const ValuesContainer = styled.div`
 
 export const PilarsSection = styled.section`
     height: 85vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
+    margin-top: 5%;
 
     >h2{
         margin: 0;
@@ -134,13 +170,16 @@ export const PilarsSection = styled.section`
         color: rgb(143, 143, 143);
     }
 
-    ul{
+    >ul{
         list-style: none;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        padding: 0;
 
-        li{
+        >li{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -151,13 +190,13 @@ export const PilarsSection = styled.section`
 
             transition: transform 0.2s;
 
-            &:hover{
+            >&:hover{
                 background: ${props => lighten(0.08, '#1C1F2A')};
                 cursor: pointer;
                 transform: translateY(10px);
             }
 
-            div{
+            >div{
                 max-width: 250px;
                 word-wrap: break-word;
                 margin-top: 3%;
@@ -171,6 +210,7 @@ export const PilarsSection = styled.section`
 export const ContactSection = styled.section`
     height: 65vh;
     display: flex;
+    margin-top: 5%;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
@@ -195,5 +235,5 @@ export const ContactForm = styled(Form)`
     padding: 1.5%;
     border-radius: 5px;
     position: relative;
-    top: 15%;
+    top: 8%;
 `

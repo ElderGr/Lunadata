@@ -19,7 +19,7 @@ function Header() {
             <nav className='menu-container'>
                 <div>
                     
-                    <Link to='/'>
+                    <Link to='/' onClick={() => setCollapse(true)}>
                         <Logo width='60px' heigth='60px' />
                     </Link>
                    
@@ -53,7 +53,7 @@ function Header() {
                             <FaChevronDown />
                         </li>
                         <li>
-                            <Link to='/articles'>
+                            <Link onClick={() => setCollapse(true)} to='/articles'>
                                 <span>Artigos</span>
                             </Link>
                         </li>

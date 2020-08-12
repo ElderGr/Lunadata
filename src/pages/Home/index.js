@@ -35,7 +35,7 @@ const Home = () => {
             Revolucionando as organizações com projetos de dados 
           </h1>
           <h2>
-            Lunadata potencializa empresas com consultoria de Arquitetura, Engenharia de dados e com Governancia.
+          Lunadata potencializando empresas com consultoria de Arquitetura de dados, Engenharia de dados Governança e capacitação profissional.
           </h2>
 
           <AnchorButton 

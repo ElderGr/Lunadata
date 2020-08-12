@@ -76,6 +76,7 @@ export const MenuCollapse = styled.section`
     > div:nth-child(2){
         padding: 1% 2%;
         width: 75%;
+        overflow-y: overlay;
     }
 
     > div:nth-child(2)>div{

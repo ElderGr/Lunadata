@@ -1,14 +1,15 @@
 import React from "react";
 
-import { StyledFooter } from "./styles";
+import { StyledFooter, ImageContainer } from "./styles";
 
 import Logo from "../../assets/Logo";
+import Linkedin from "../../assets/icons/linkedin-icon.png";
 
 export default function Footer(props){
     return(
         <StyledFooter>
             <div>
-                <Logo width={200} height={200} />
+                <Logo width={100} height={100} />
             </div>
             
             <div>
@@ -17,29 +18,25 @@ export default function Footer(props){
                     Telefone: (11) 98747-3887
                 </p>
                 <p>
-                    Email: gbielrs@gmail.com
+                    Email: lunadatabr@gmail.com
                 </p>
             </div>
             
             <div>
-                <h3>Endereço</h3>
+                <h3>Telefone</h3>
                 <p>
-                    Estrada dos Mirandas, 210
+                    (11)9 6080-6483
                 </p>
             </div>
             
-            <div>
+            <ImageContainer>
                 <h3>Redes sociais</h3>
-                <p>
-                    Facebook
-                </p>
-                <p>
-                    Instagran
-                </p>
-                <p>
-                    Linkedin
-                </p>
-            </div>
+                <a href='https://www.linkedin.com/company/lunadata-technologies' rel="noopener noreferrer" target='_blank'>
+                    <div>
+                        <img src={Linkedin} alt='linkedin' />
+                    </div>
+                </a>
+            </ImageContainer>
         </StyledFooter>
     )
 }
