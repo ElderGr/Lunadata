@@ -97,9 +97,9 @@ export const IntroSection = styled.section`
 `;
 
 export const ValuesSection = styled.section`
-    height: 80vh;
+    /* height: 80vh; */
     display: flex;
-    padding-top: 5%;
+    padding: 7% 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -107,7 +107,7 @@ export const ValuesSection = styled.section`
 
     >h2{
         margin: 0;
-        font-size: 20pt;
+        font-size: 1.6rem;
     }
 
     >h3{
@@ -118,19 +118,55 @@ export const ValuesSection = styled.section`
         color: rgb(143, 143, 143);
     }
 
-    div{
+    > div{
         display: flex;
         justify-content: center;
         width: 100%;
 
-        div{
+        > div{
             display: flex;
             flex-direction: column;
             width: 350px;
         }
 
-        svg{
+        > svg{
             margin-right: 10%;
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+    @media(min-width: 1025px){
+
+    }
+
+    @media(min-width: 769px) and (max-width: 1024px){
+        > div{
+            align-items: center;
+        }
+    }
+
+    @media(max-width: 768px){
+        > &{
+            padding: 10% 0;
+        }
+        > h3{
+            width: 85%;
+        }
+
+        > div{
+            flex-direction: column;
+            align-items: center;
+
+            > svg{
+                width: 15rem;
+                height: 15rem;
+                margin: 0;
+            }
+
+            > div {
+                align-items: center;
+            }
         }
     }
 `
@@ -150,14 +186,13 @@ export const ValuesContainer = styled.div`
 `
 
 export const PilarsSection = styled.section`
-    height: 85vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
-    margin-top: 5%;
+    padding: 5% 0;
 
     >h2{
         margin: 0;
@@ -165,7 +200,6 @@ export const PilarsSection = styled.section`
 
     >h3{
         font-weight: 300;
-        width: 600px;
         text-align: center;
         color: rgb(143, 143, 143);
     }
@@ -180,35 +214,57 @@ export const PilarsSection = styled.section`
         padding: 0;
 
         >li{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            
-            padding: 2% 0;
-            margin: 0 1%;
+            > a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                
+                text-decoration: none;
+                padding: 2% 0;
+                margin: 0 1%;
 
-            transition: transform 0.2s;
+                transition: transform 0.2s;
+                &:hover{
+                    background: ${props => lighten(0.08, '#1C1F2A')};
+                    cursor: pointer;
+                    transform: translateY(10px);
+                }
 
-            >&:hover{
-                background: ${props => lighten(0.08, '#1C1F2A')};
-                cursor: pointer;
-                transform: translateY(10px);
+                >span{
+                    color: #fff;
+                }
+                >div{
+                    max-width: 15rem;
+                    word-wrap: break-word;
+                    margin-top: 3%;
+                    text-align: center;
+                    color: rgb(143, 143, 143);
+                }
             }
 
-            >div{
-                max-width: 250px;
-                word-wrap: break-word;
-                margin-top: 3%;
-                text-align: center;
-                color: rgb(143, 143, 143);
-            }
+        }
+    }
+
+    @media(min-width: 1025px){
+
+    }
+
+    @media(min-width: 769px) and (max-width: 1024px){
+
+    }
+
+    @media(max-width: 768px){
+        > &{
+            padding: 10% 0;
+        }
+        > h3{
+            width: 85%;
         }
     }
 ` 
 
 export const ContactSection = styled.section`
-    height: 65vh;
     display: flex;
     margin-top: 5%;
     justify-content: space-around;
@@ -227,13 +283,53 @@ export const ContactSection = styled.section`
             color: rgb(143, 143, 143);
         }
     }
+
+    @media(min-width: 1025px){
+
+    }
+
+    @media(min-width: 769px) and (max-width: 1024px){
+
+    }
+
+    @media(max-width: 768px){
+        > &{
+            padding: 10% 0;
+        }
+
+        >div{
+            display: flex; 
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10%;
+
+            > h3{
+                width: 85%;
+                margin: 0;
+            }
+        }
+    }
 `
 
 export const ContactForm = styled(Form)`
     background-color: #FFFFFF;
-    min-width: 400px;
-    padding: 1.5%;
+    min-width: 300px;
+    width: 400px;
+    padding: 2.5%;
     border-radius: 5px;
-    position: relative;
+    margin: 5% 0;
     top: 8%;
+
+    @media(min-width: 1025px){
+
+    }
+
+    @media(min-width: 769px) and (max-width: 1024px){
+
+    }
+
+    @media(max-width: 768px){
+        position: relative;
+    }
 `

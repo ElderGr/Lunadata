@@ -1,8 +1,7 @@
 import React, {useRef, useCallback, useState, useEffect} from "react";
 
-import { Container, Error } from './style';
+import { Container } from './style';
 import { useField } from '@unform/core';
-import { FiAlertCircle } from 'react-icons/fi';
 
 const Input = ({placeholder, name, ...rest}) => {
     const { fieldName, defaultValue, error, registerField } = useField(name);
@@ -32,20 +31,13 @@ const Input = ({placeholder, name, ...rest}) => {
     return(
         <Container isErrored={!!error} isField={isField} isFocused={isFocused}>
             <label htmlFor={name}>{placeholder}</label>
-            <div>
-                <input
-                    onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}
-                    defaultValue={defaultValue}
-                    ref={inputRef}
-                    {...rest}
-                />
-                {error && (
-                    <Error title={error}>
-                        <FiAlertCircle color='#c53030' size={20} />
-                    </Error>
-                )}
-            </div>
+            <textarea
+                onFocus={handleInputFocus}
+                onBlur={handleInputBlur}
+                defaultValue={defaultValue}
+                ref={inputRef}
+                {...rest}
+            />
         </Container>
     )
 }

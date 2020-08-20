@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useCallback} from 'react';
 
 import { 
   IntroSection, 
@@ -12,19 +12,58 @@ import {
 import AnchorButton from '../../components/AnchorButton';
 import Button from '../../components/Button';
 import Input from "../../components/Input";
+import Textarea from '../../components/Textarea';
 
 import Logo from "../../assets/Logo";
 import CloudComputing from "../../assets/icons/CloudComputing";
 import EngenhariaDados from "../../assets/icons/EngenhariaDados";
 import IA from "../../assets/icons/IA";
 import IOT from "../../assets/icons/IOT";
+import { Link } from 'react-router-dom';
+import * as Yup from 'yup';
+import getValidationErrors from '../../utils/getValidationErrors';
 
 const Home = () => {
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
   const [email, setEmail] = useState('');
-  const [cellphone, setCellphone] = useState('');
+  const [telphone, setTelphone] = useState('');
   const [description, setDescription] = useState('');
+  const formRef = useRef(null)
+
+  const handleSubmit = useCallback(async (data) =>{
+    try {
+      // setLoading(true);
+      formRef.current.setErrors({});
+
+      const schema = Yup.object().shape({
+        name: Yup.string()
+          .required('Nome é obrigatório'),
+        surname: Yup.string()
+          .required('Sobrenome é obrigatório'),
+        email: Yup.string()
+          .required('E-mail obrigatório')
+          .email('Digite um e-mail válido'),
+        telphone: Yup.string()
+          .required('Telefone é obrigatório'),
+      });
+
+      await schema.validate(data, {
+        abortEarly: false,
+      });
+
+      // history.push('/home');
+      // setLoading(false);
+    } catch (err) {
+      if (err instanceof Yup.ValidationError) {
+        const errors = getValidationErrors(err);
+
+        formRef.current.setErrors(errors);
+      }
+      // setLoading(false);
+      // console.log(err);
+    }
+  }, [])
 
   return (
     <>
@@ -57,7 +96,7 @@ const Home = () => {
         <h3>Procuramos entregar soluções perfeitas que se encaixem em seu case baseado em dois pilares</h3>
 
         <div>
-          <Logo width='400px' height='400px' />
+          <Logo />
 
           <div>
             <ValuesContainer>
@@ -86,40 +125,48 @@ const Home = () => {
         <h3>Trabalhamos com áreas essenciais para o seu negócio</h3>
         <ul>
           <li>
-            <EngenhariaDados width={300} height={300} />
-            <span>
-              Engenharia de dados
-            </span>
-            <div>
-              Entender seus dados e prepara-los para insights, que vão alavancar seus resultados.
-            </div>
+            <Link to='/dataEngenieer'>
+              <EngenhariaDados width={300} height={300} />
+              <span>
+                Engenharia de dados
+              </span>
+              <div>
+                Entender seus dados e prepara-los para insights, que vão alavancar seus resultados.
+              </div>
+            </Link>
           </li>
           <li>
-            <CloudComputing width={300} height={300} />
-            <span>
-              Cloud computing
-            </span>
-            <div>
-              Usar a escalabilidade da nuvem, e os recursos compartilhados pelas maiores empresas do mundo.
-            </div>
+            <Link to='/cloud'>
+              <CloudComputing width={300} height={300} />
+              <span>
+                Cloud computing
+              </span>
+              <div>
+                Usar a escalabilidade da nuvem, e os recursos compartilhados pelas maiores empresas do mundo.
+              </div>
+            </Link>
           </li>
           <li>
-            <IA width={300} height={300} />
-            <span>
-              Inteligencia artificial
-            </span>
-            <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            </div>
+            <Link to='/ia'>
+              <IA width={300} height={300} />
+              <span>
+                Inteligencia artificial
+              </span>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              </div>
+            </Link>
           </li>
           <li>
-            <IOT width={300} height={300} />
-            <span>
-              IOT
-            </span>
-            <div>
-              Dispositivos conectados em qualquer lugar do mundo  , permitindo o entendimento de acontecimentos antes ignorados.
-            </div>
+            <Link to='/iot'>
+              <IOT width={300} height={300} />
+              <span>
+                IOT
+              </span>
+              <div>
+                Dispositivos conectados em qualquer lugar do mundo  , permitindo o entendimento de acontecimentos antes ignorados.
+              </div>
+            </Link>
           </li>
         </ul>
       </PilarsSection>
@@ -131,7 +178,7 @@ const Home = () => {
             Estamos prontos para te entregar a melhor solução para seu negócio
           </h3>
         </div>
-        <ContactForm >
+        <ContactForm ref={formRef} onSubmit={handleSubmit} >
           <Input 
              id='name' 
              name='name'
@@ -164,11 +211,11 @@ const Home = () => {
              name='telphone'
              placeholder='Telefone' 
              type="number" 
-             value={cellphone}
-             onChange={e => setCellphone(e.target.value)}
+             value={telphone}
+             onChange={e => setTelphone(e.target.value)}
           />
           
-          <Input 
+          <Textarea 
              id='description' 
              name='description'
              placeholder='Descreva' 
@@ -176,7 +223,6 @@ const Home = () => {
              value={description}
              onChange={e => setDescription(e.target.value)}
           />
-
           <Button 
             type='submit'
             color='#EE4D29'

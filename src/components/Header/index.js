@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { FaChevronDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Media from 'react-media';
 
 import { Menu, MenuItens, MenuCollapse } from "./styles";
 import AnchorButton from "../AnchorButton";

@@ -8,9 +8,34 @@ export const StyledFooter = styled.footer`
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+
+    @media(min-width: 1025px){
+
+    }
+
+    @media(min-width: 769px) and (max-width: 1024px){
+
+    }
+
+    @media(max-width: 768px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        > div{
+            margin-top: 4%;
+        }
+    }
 `;
 
 export const ImageContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
     > a > div{
         width: 50px;
     }
