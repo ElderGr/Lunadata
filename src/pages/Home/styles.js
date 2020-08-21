@@ -330,6 +330,7 @@ export const ContactForm = styled(Form)`
     }
 
     @media(max-width: 768px){
+        width: 300px;
         position: relative;
     }
 `
