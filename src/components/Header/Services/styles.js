@@ -6,7 +6,7 @@ export const ItemsDetails = styled(Link)`
     margin-bottom: 3%;
     width: 280px;
     display: flex;
-    padding: 0.5%;
+    padding: 2% 0.5%;
     margin-right: 0.5%;
     border-radius: 5px;
     cursor: pointer;

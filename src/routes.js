@@ -3,8 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import Home from "./pages/Home";
 import Articles from "./pages/Articles";
-import DataEngenieer from "./pages/Services/dataEngenieer";
-import Cloud from "./pages/Services/cloud";
+import DataEngenieer from "./pages/Services/DataEngenieer";
+import Cloud from "./pages/Services/Cloud";
 import IOT from "./pages/Services/IOT";
 import IA from "./pages/Services/IA";
 

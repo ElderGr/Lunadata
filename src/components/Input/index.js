@@ -27,6 +27,7 @@ const Input = ({placeholder, name, ...rest}) => {
             ref: inputRef.current,
             path: 'value'
         })
+        
     }, [fieldName, registerField])
 
     return(

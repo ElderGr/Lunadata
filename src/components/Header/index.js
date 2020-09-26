@@ -7,7 +7,7 @@ import Media from 'react-media';
 import { Menu, MenuItens, MenuCollapse } from "./styles";
 import AnchorButton from "../AnchorButton";
 
-import Logo from "../../assets/Logo";
+import Logo from '../../assets/logo_original.svg';
 import Services from './Services';
 import Cases from './Cases';
 
@@ -25,7 +25,7 @@ function Header() {
                     </Media>
 
                     <Link to='/' onClick={() => setCollapse(true)}>
-                        <Logo width='60px' heigth='60px' />
+                        <img src={Logo} alt='Lunadata logo' style={{width: '80px', height: '80px'}} />
                     </Link>
                     
                     <Media query={{ minWidth: 1025 }}>

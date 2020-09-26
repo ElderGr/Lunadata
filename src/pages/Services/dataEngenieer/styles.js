@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import { Form } from "@unform/web";
 
 export const Container = styled.div`
     padding: 5%;
-    /* height: 85vh; */
 
     >section{
         display: flex;
@@ -21,7 +19,6 @@ export const Container = styled.div`
 `;
 
 export const ContactSection = styled.section`
-    height: 65vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -39,13 +36,4 @@ export const ContactSection = styled.section`
             color: rgb(143, 143, 143);
         }
     }
-`
-
-export const ContactForm = styled(Form)`
-    background-color: #FFFFFF;
-    min-width: 400px;
-    padding: 1.5%;
-    border-radius: 5px;
-    position: relative;
-    top: 25%;
 `
