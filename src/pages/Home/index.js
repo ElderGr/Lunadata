@@ -75,7 +75,9 @@ const Home = () => {
             Revolucionando as organizações com projetos de dados 
           </h1>
           <h2>
-          Lunadata potencializando empresas com consultoria de Arquitetura de dados, Engenharia de dados Governança e capacitação profissional.
+            Lunadata potencializando empresas com consultoria de
+            Arquitetura de dados, Engenharia de dados, Governança e
+            capacitação profissional.
           </h2>
 
           <AnchorButton 
@@ -94,7 +96,7 @@ const Home = () => {
 
       <ValuesSection>
         <h2>Pilares</h2>
-        <h3>Procuramos entregar soluções perfeitas que se encaixem em seu case baseado em dois pilares</h3>
+        <h3>Entregamos soluções perfeitas que se encaixam em seu case baseado em dois pilares.</h3>
 
         <div>
           <Logo />
@@ -105,16 +107,17 @@ const Home = () => {
                 Agilidade
               </h2>
               <p>
-                Utilizando o framework Scrum e pensando Lean temos uma metodologia totalmente aplicável a realidade
-                da sua empresa, com entregas rápidas e iterativas. Entregando resultado em semanas e não meses. 
+                Utilizando o framework Scrum e pensando Lean temos uma metodologia totalmente
+                aplicável à realidade da sua empresa, com entregas rápidas e iterativas. Entregando
+                resultados em semanas e não meses. 
               </p>
             </ValuesContainer>
 
             <ValuesContainer>
               <h2>Autoridade</h2>
               <p>
-                Temos a medida necessaria entre academia e industria para a avaliação e implementação de 
-                qualquer projeto de governança, arquitetura e engenharia de dados. 
+                Temos a medida necessária entre academia e indústria, para a avaliação e implementação
+                de qualquer projeto de governança, arquitetura e engenharia de dados.
               </p>
             </ValuesContainer>
           </div>
@@ -151,7 +154,7 @@ const Home = () => {
             <Link to='/ia'>
               <IA width={300} height={300} />
               <span>
-                Inteligencia artificial
+                Inteligência artificial
               </span>
               <div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
@@ -176,7 +179,7 @@ const Home = () => {
         <div>
           <h2>Gostou? Fale conosco!</h2>
           <h3>
-            Estamos prontos para te entregar a melhor solução para seu negócio
+            Estamos prontos para lhe entregar a melhor solução para seu negócio
           </h3>
         </div>
         <ContactForm ref={formRef} onSubmit={handleSubmit} >

@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 import Routes from "./routes";
 
-function App() {
+function App(props) {
   return (
     <Router>
       <Header />

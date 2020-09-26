@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import { Container, ContactSection, ContactForm } from './styles';
 import IA from "../../../assets/icons/IA";
@@ -8,10 +8,14 @@ import Input from "../../../components/Input";
 
 export default function DataEngerieer(){
     const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
-  const [email, setEmail] = useState('');
-  const [cellphone, setCellphone] = useState('');
-  const [description, setDescription] = useState('');
+    const [surname, setSurname] = useState('');
+    const [email, setEmail] = useState('');
+    const [cellphone, setCellphone] = useState('');
+    const [description, setDescription] = useState('');
+
+    useEffect(() =>{
+        window.scrollTo(0, 0)
+    }, [])
 
     return(
         <Container>
@@ -20,38 +24,6 @@ export default function DataEngerieer(){
                     <IA width={600} height={600}  />
                 </div>
 
-                <div>
-                    <h2>Engenharia de dados</h2>
-                    <p>
-                        Nesse momento que, a produção de dados dispara a cada minuto, 
-                        e que as fontes de dados são cada vez mais diversificadas, 
-                        dados de redes sociais, dados de sistemas internos como ERPs e CRMs.
-                    </p>
-
-                    <p>
-                        Nós vamos, junto com seus profissionais e usando as melhores práticas 
-                        do mercado, desenvolver um pipeline de ingestão de dados, que vai 
-                        possibilitar a carga de dados estruturados e não estruturados para 
-                        dentro do seu data lake. 
-                    </p>
-
-                    <p>
-                        Nesse processo, vamos colocar em prática a governança de dados, 
-                        criando o repositório de metadados.
-                    </p>
-
-                    <p>
-                        Vamos criar visões no seu data lake para que você possa com 
-                        ferramentas analíticas, acessar essas informações e explorar novos 
-                        insights.
-                    </p>
-
-                    <p>
-                        Seus cientistas de dados vão ter um ambiente, padronizado, 
-                        devidamente estruturado e com dados normalizados para a busca 
-                        dos insights que vão alavancar seus negócios.
-                    </p>
-                </div>
             </section>
             <ContactSection id='contact-section'>
                 <div>

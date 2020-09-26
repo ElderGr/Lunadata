@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import { Container, ContactSection, ContactForm } from './styles';
 import IOT from "../../../assets/icons/IOT";
@@ -8,10 +8,14 @@ import Input from "../../../components/Input";
 
 export default function DataEngerieer(){
     const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
-  const [email, setEmail] = useState('');
-  const [cellphone, setCellphone] = useState('');
-  const [description, setDescription] = useState('');
+    const [surname, setSurname] = useState('');
+    const [email, setEmail] = useState('');
+    const [cellphone, setCellphone] = useState('');
+    const [description, setDescription] = useState('');
+
+    useEffect(() =>{
+        window.scrollTo(0, 0)
+    }, [])
 
     return(
         <Container>
@@ -23,15 +27,21 @@ export default function DataEngerieer(){
                 <div>
                     <h2>IOT</h2>
                     <p>
-                        A Internet of Things ou Internet das Coisas, possibilita as empresas entender seus produtos e o uso feito pelos clientes.
+                        A Internet of Things ou Internet das Coisas, possibilita às empresas entender seus produtos
+                        e o uso feito pelos clientes.
                     </p>
 
                     <p>
-                        A Lunadata está preparada para apoiar a sua empresa nesse mercado de IoT, sendo sua parceira na centralização dessas informações, criando pipelines inteligentes que vão coletar todos os dados gerados pelos dispositivos e disponibilizar esses dados em uma estrutura devidamente operacional e monitorada com ferramentas que vão permitir o estudo desses dados e a identificação de oportunidades.
+                        A Lunadata está preparada para apoiar a sua empresa na adoção de IoT, sendo sua parceira
+                        na implantação e centralização dessas informações, criando pipelines inteligentes, que vão
+                        coletar todos os dados gerados pelos dispositivos e disponibilizar esses dados em uma
+                        estrutura devidamente operacional e monitorada, com ferramentas que vão permitir o
+                        estudo desses dados e a identificação de oportunidades.    
                     </p>
 
                     <p>
-                        Os benefícios da IoT são inúmeros como manutenção preditiva, melhor experiência para os clientes e maior compreensão dos processos.
+                        Os benefícios da IoT são inúmeros como manutenção preditiva, melhor experiência para os
+                        clientes e maior compreensão dos processos.    
                     </p>
                 </div>
             </section>

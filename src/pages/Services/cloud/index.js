@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import { Container, ContactSection, ContactForm } from './styles';
 import CloudComputing from "../../../assets/icons/CloudComputing";
@@ -8,10 +8,14 @@ import Input from "../../../components/Input";
 
 export default function DataEngerieer(){
     const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
-  const [email, setEmail] = useState('');
-  const [cellphone, setCellphone] = useState('');
-  const [description, setDescription] = useState('');
+    const [surname, setSurname] = useState('');
+    const [email, setEmail] = useState('');
+    const [cellphone, setCellphone] = useState('');
+    const [description, setDescription] = useState('');
+
+    useEffect(() =>{
+        window.scrollTo(0, 0)
+    }, [])
 
     return(
         <Container>
@@ -23,15 +27,22 @@ export default function DataEngerieer(){
                 <div>
                     <h2>Cloud</h2>
                     <p>
-                        A Lunadata esta capacitada para levar sua empresa para o próximo nível, seja na implantação de uma arquitetura cloud, ou para entender seu uso de um serviço já contratado.
+                        A Lunadata está capacitada para levar sua empresa para o próximo nível, seja na
+                        implantação de uma arquitetura cloud, ou para entender seu uso de um serviço já
+                        contratado.
                     </p>
 
                     <p>
-                        Na implantação, vamos mapear as áreas de negócio que podem trazer mais resultados para suas metas baseados nas metas da sua empresa. Vamos levar seus dados para cloud e usar as ferramentas disponíveis para tirar os insights que vão levar sua empresa para o próximo nível.
+                        Na implantação, vamos mapear as áreas de negócio que podem trazer mais resultados para
+                        suas metas baseados nas metas da sua empresa. Vamos levar seus dados para cloud e usar as ferramentas disponíveis para tirar os insights que vão levar sua empresa para o
+                        próximo nível.
                     </p>
 
                     <p>
-                        No entendimento de um serviço já contratado existem muitos pontos de ganho, estratégia de uso de ferramentas disponíveis e não utilizadas, mapeamento de custos indevidos e auxilio a equipe da sua empresa de como reduzir esses custos e continuar tirando o máximo de proveito dos serviços da nuvem.
+                        No entendimento de um serviço já contratado existem muitos pontos de ganho, estratégia
+                        de uso de ferramentas disponíveis e não utilizadas, mapeamento de custos indevidos e
+                        auxilio a equipe da sua empresa de como reduzir esses custos e continuar tirando o
+                        máximo de proveito dos serviços da nuvem.
                     </p>
                 </div>
             </section>
@@ -39,7 +50,7 @@ export default function DataEngerieer(){
                 <div>
                 <h2>Gostou? Fale conosco!</h2>
                 <h3>
-                    Estamos prontos para te entregar a melhor solução para seu negócio
+                    Estamos prontos para lhe entregar a melhor solução para seu negócio
                 </h3>
                 </div>
                 <ContactForm >
