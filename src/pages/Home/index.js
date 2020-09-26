@@ -6,7 +6,8 @@ import {
   ValuesContainer,
   PilarsSection,
   ContactSection,
-  ContactForm
+  ContactForm,
+  CheboxContainer
 } from "./styles";
 
 import AnchorButton from '../../components/AnchorButton';
@@ -223,6 +224,10 @@ const Home = () => {
              value={description}
              onChange={e => setDescription(e.target.value)}
           />
+          <CheboxContainer>
+            <input type='checkbox' id='marketingInput' />
+            <label htmlFor='marketingInput'>Permite o envio de e-mails pela nossa equipe de marketing?</label>
+          </CheboxContainer>
           <Button 
             type='submit'
             color='#EE4D29'

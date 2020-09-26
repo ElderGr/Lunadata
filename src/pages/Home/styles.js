@@ -97,7 +97,6 @@ export const IntroSection = styled.section`
 `;
 
 export const ValuesSection = styled.section`
-    /* height: 80vh; */
     display: flex;
     padding: 7% 0;
     flex-direction: column;
@@ -121,6 +120,7 @@ export const ValuesSection = styled.section`
     > div{
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 100%;
 
         > div{
@@ -333,4 +333,9 @@ export const ContactForm = styled(Form)`
         width: 300px;
         position: relative;
     }
+`
+
+export const CheboxContainer = styled.div`
+    display: flex;
+    margin: 5% 0;
 `
